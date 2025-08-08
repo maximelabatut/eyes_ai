@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import pygame
 import random
 import time
@@ -9,9 +10,9 @@ import rectangular_glow  # <-- Import ruban lumineux
 
 pygame.init()
 
-SCREEN_WIDTH = 320
-SCREEN_HEIGHT = 240
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+SCREEN_WIDTH = 480
+SCREEN_HEIGHT = 320
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Assistant Kawaii")
 
 font = pygame.font.SysFont(None, 24)

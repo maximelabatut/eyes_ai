@@ -70,4 +70,6 @@ class Mouth:
             pygame.draw.line(self.screen, self.color, (x - half_width, y), (x + half_width, y), 3)
         else:
             rect = pygame.Rect(x - half_width, y - self.height, self.width, self.height * 2)
-            pygame.draw.arc(self.screen, self.color, rect, self.start_angle, self.end_angle, 5)
+            max_width = min(rect.width, rect.height) // 2
+            width = min(5, max_width)
+            pygame.draw.arc(self.screen, self.color, rect, self.start_angle, self.end_angle, width)
