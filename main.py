@@ -9,6 +9,7 @@ from expressions import expressions
 import rectangular_glow  # <-- Import ruban lumineux
 
 pygame.init()
+pygame.mouse.set_visible(False)
 
 SCREEN_WIDTH = 480
 SCREEN_HEIGHT = 320
@@ -70,6 +71,9 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running = False
         elif event.type == pygame.MOUSEBUTTONDOWN:
             enter_listening_mode()
 
